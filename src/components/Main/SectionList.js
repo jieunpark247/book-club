@@ -1,96 +1,46 @@
-/*!
 
-=========================================================
-* Paper Kit React - v1.3.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+
+// reactstrap components
+import { Container } from "reactstrap";
+
+// core components
 
 function SectionList() {
   return (
-    <>
-      <div id="images">
-          <Container>
-            <Row>
-              <Col className="mr-auto gx-5" md="3" sm="5">
-                <h4 className="images-title">천개의 파랑</h4>
-                <img
-                  alt="..."
-                  className="img-thumbnail img-responsive"
-                  src={require("assets/img/booklist/book1.jpg").default}
-                />
-                <p className="text-center">천개의 파랑 책 읽기 클럽</p>
-              </Col>
-
-              <Col className="mr-auto gx-5" md="3" sm="5">
-                <h4 className="images-title">죽여 마땅한 사람들</h4>
-                <img
-                  alt="..."
-                  className="img-thumbnail img-responsive"
-                  src={require("assets/img/booklist/book2.jpg").default}
-                />
-                <p className="text-center">죽여 마땅한 사람들 책 읽기 클럽</p>
-              </Col>
-
-              <Col className="mr-auto gx-5" md="3" sm="5">
-                <h4 className="images-title">우리가 빛의 속도로 갈 수 없다면</h4>
-                <img
-                  alt="..."
-                  className="img-thumbnail img-responsive"
-                  src={require("assets/img/booklist/book3.jpg").default}
-                />
-                <p className="text-center">우리가 빛의 속도로 갈 수 없다면 책 읽기 클럽</p>
-              </Col>
-
-
-              <Col className="mr-auto gx-5" md="3" sm="5">
-                <h4 className="images-title">천개의 파랑</h4>
-                <img
-                  alt="..."
-                  className="img-thumbnail img-responsive"
-                  src={require("assets/img/booklist/book2.jpg").default}
-                />
-                <p className="text-center">천개의 파랑 책 읽기 클럽</p>
-              </Col>
-
-
-              <Col className="mr-auto gx-5" md="3" sm="5">
-                <h4 className="images-title">천개의 파랑</h4>
-                <img
-                  alt="..."
-                  className="img-thumbnail img-responsive"
-                  src={require("assets/img/booklist/book3.jpg").default}
-                />
-                <p className="text-center">천개의 파랑 책 읽기 클럽</p>
-              </Col>
-
-
-              <Col className="mr-auto gx-5" md="3" sm="5">
-                <h4 className="images-title">천개의 파랑</h4>
-                <img
-                  alt="..."
-                  className="img-thumbnail img-responsive"
-                  src={require("assets/img/booklist/book2.jpg").default}
-                />
-                <p className="text-center">천개의 파랑 책 읽기 클럽</p>
-              </Col>
-            </Row>
-          </Container>
+    <section class="pt-3 pb-4" id="count-stats">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-9 z-index-2 border-radius-xl mt-n10 mx-auto py-3 blur shadow-blur">
+            <div class="row">
+                <div class="col-md-4 position-relative">
+                <div class="p-3 text-center">
+                    <h1 class="text-gradient text-primary"><span id="state1" countTo="70">0</span>+</h1>
+                    <h5 class="mt-3">Coded Elements</h5>
+                    <p class="text-sm">From buttons, to inputs, navbars, alerts or cards, you are covered</p>
+                </div>
+                <hr class="vertical dark"/>
+                </div>
+                <div class="col-md-4 position-relative">
+                <div class="p-3 text-center">
+                    <h1 class="text-gradient text-primary"> <span id="state2" countTo="15">0</span>+</h1>
+                    <h5 class="mt-3">Design Blocks</h5>
+                    <p class="text-sm">Mix the sections, change the colors and unleash your creativity</p>
+                </div>
+                <hr class="vertical dark"/>
+                </div>
+                <div class="col-md-4">
+                <div class="p-3 text-center">
+                    <h1 class="text-gradient text-primary" id="state3" countTo="4">0</h1>
+                    <h5 class="mt-3">Pages</h5>
+                    <p class="text-sm">Save 3-4 weeks of work when you use our pre-made pages for your website</p>
+                </div>
+                </div>
+            </div>
+            </div>
         </div>
-    </>
+        </div>
+    </section>
   );
 }
 

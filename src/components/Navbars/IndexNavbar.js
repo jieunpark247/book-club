@@ -10,6 +10,8 @@ import {
   NavItem,
   NavLink,
   Nav,
+  Row,
+  Col,
   Container,
   DropdownToggle,
   DropdownMenu,
@@ -48,144 +50,128 @@ function IndexNavbar() {
     };
   });
   return (
-    <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
-      <Container>
-        <div className="navbar-translate">
-          <NavbarBrand
-            data-placement="bottom"
-            href="/index"
-            target="_blank"
-            title="Coded by Creative Tim"
-          >
-            book Club
-          </NavbarBrand>
-          <button
-            aria-expanded={navbarCollapse}
-            className={classnames("navbar-toggler navbar-toggler", {
-              toggled: navbarCollapse,
-            })}
-            onClick={toggleNavbarCollapse}
-          >
-            <span className="navbar-toggler-bar bar1" />
-            <span className="navbar-toggler-bar bar2" />
-            <span className="navbar-toggler-bar bar3" />
-          </button>
-        </div>
-        <Collapse
-          className="justify-content-end"
-          navbar
-          isOpen={navbarCollapse}
-        >
-          <Nav navbar>
-            <NavItem>
-              <NavLink
+   <Container className= "position-sticky z-index-sticky top-0">
+     <Row>
+       <Col xs={12}>
+        <Navbar className= "navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4"  expand="lg">
+          <Container fluid>
+            <div className="navbar-brand font-weight-bolder ms-sm-3">
+              <NavbarBrand
                 data-placement="bottom"
-                href="https://twitter.com/"
-                target="_blank"
-                title="Follow us on Twitter"
-              >
-                <i className="fa fa-twitter" />
-                <p className="d-lg-none">Twitter</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.facebook.com/"
-                target="_blank"
-                title="Like us on Facebook"
-              >
-                <i className="fa fa-facebook-square" />
-                <p className="d-lg-none">Facebook</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.instagram.com/"
-                target="_blank"
-                title="Follow us on Instagram"
-              >
-                <i className="fa fa-instagram" />
-                <p className="d-lg-none">Instagram</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.github.com/"
-                target="_blank"
-                title="Star on GitHub"
-              >
-                <i className="fa fa-github" />
-                <p className="d-lg-none">GitHub</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                href="/register"
+                href="/index"
                 target="_blank"
               >
-                <i className="nc-icon nc-single-02" /> 
-                <p className="d-lg-none"> My Page</p>
-              </NavLink>
-            </NavItem>
-            {/* <NavItem>
-              <Button
-                className="btn-round"
-                color="danger"
-                href="/register"
-                target="_blank"
+              Book Club
+              </NavbarBrand> 
+              </div>
+              <button
+                aria-expanded={navbarCollapse}
+                // className={classnames("navbar-toggler navbar-toggler", {
+                //   toggled: navbarCollapse,
+                // })}
+                className = "navbar-toggler shadow-none ms-2"
+                onClick={toggleNavbarCollapse}
               >
-                <i className="nc-icon nc-spaceship"></i> login/register
-              </Button>
-            </NavItem> */}
-              <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    caret
-                    color="default"
-                    data-toggle="dropdown"
-                    href="#pablo"
-                    nav
-                    onClick={(e) => e.preventDefault()}
-                    role="button"
-                  >
-                    <i
-                      aria-hidden={true}
-                      className="nc-icon nc-settings-gear-65"
-                    />
-                  </DropdownToggle>
-                  <DropdownMenu className="dropdown-danger" right>
-                    <DropdownItem header tag="span">
-                      setting
-                    </DropdownItem>
-                    <DropdownItem
-                      href="/login"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Login
-                    </DropdownItem>
-                    <DropdownItem
-                      href="/register"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Register
-                    </DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem
-                      href="/register"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Separated link
-                    </DropdownItem>
-                  </DropdownMenu>
-              </UncontrolledDropdown>
-          </Nav>
-        </Collapse>
-      </Container>
-    </Navbar>
+                <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1 "></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+              </button>
+          
+            <Collapse
+              className="justify-content-end"
+              navbar
+              isOpen={navbarCollapse}
+            >
+              <Nav navbar>
+                <UncontrolledDropdown nav inNavbar>
+                      <DropdownToggle
+                        aria-expanded={false}
+                        aria-haspopup={true}
+                        caret
+                        color="default"
+                        data-toggle="dropdown"
+                        href="#pablo"
+                        nav
+                        onClick={(e) => e.preventDefault()}
+                        role="button"
+                      >
+                     BookClub
+                      </DropdownToggle>
+                      <DropdownMenu className="dropdown-danger" right>
+                        <DropdownItem header tag="span">
+                          북클럽
+                        </DropdownItem>
+                        <DropdownItem
+                          href="/login"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          북클럽 만들기
+                        </DropdownItem>
+                        <DropdownItem divider />
+                        <DropdownItem
+                          href="/register"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          북클럽 가입하기
+                        </DropdownItem>
+                      </DropdownMenu>
+                  </UncontrolledDropdown>
+
+                  <UncontrolledDropdown nav inNavbar>
+                      <DropdownToggle
+                        aria-expanded={false}
+                        aria-haspopup={true}
+                        caret
+                        color="default"
+                        data-toggle="dropdown"
+                        href="#pablo"
+                        nav
+                        onClick={(e) => e.preventDefault()}
+                        role="button"
+                      >
+                     My
+                      </DropdownToggle>
+                      <DropdownMenu className="dropdown-danger" right>
+                        <DropdownItem header tag="span">
+                          setting
+                        </DropdownItem>
+                        <DropdownItem
+                          href="/login"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Login
+                        </DropdownItem>
+                        <DropdownItem
+                          href="/register"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Register
+                        </DropdownItem>
+                        <DropdownItem divider />
+                        <DropdownItem
+                          href="/register"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Separated link
+                        </DropdownItem>
+                      </DropdownMenu>
+                  </UncontrolledDropdown>
+              </Nav>
+    
+      
+                <li class="nav-item my-auto ms-3 ms-lg-0">
+                  <a href="/Login" class="btn btn-sm bg-gradient-primary btn-round mb-0 me-1 mt-2 mt-md-0">북클럽 만들기</a>
+                </li> 
+                {/* 고치기!!!!!!!!! */}
+
+            </Collapse>
+          </Container>
+        </Navbar>
+      </Col>
+    </Row>
+  </Container>
   );
 }
 
