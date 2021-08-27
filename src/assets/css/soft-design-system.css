@@ -2434,6 +2434,20 @@ textarea.form-control-lg {
   font-size: 0.75rem;
   border-radius: 0.5rem;
   transition: all 0.15s ease-in; }
+.btn-kakao {
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  }
+.btn-kakao :hover {
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
   @media (prefers-reduced-motion: reduce) {
     .btn {
       transition: none; } }
@@ -12332,7 +12346,7 @@ textarea.form-control-lg {
   .dropup .dropdown-toggle:after,
   .dropstart .dropdown-toggle:after,
   .dropend .dropdown-toggle:after {
-    transition: 0.3s ease; }
+    transition: 0.3s ease; } 
   .dropdown.dropdown-hover .dropdown-menu,
   .dropdown .dropdown-menu {
     display: block;

@@ -11,7 +11,7 @@ import IndexFooter from "../components/Footers/IndexFooter.js";
 import SectionList from "../components/Main/SectionList.js";
 import ClubList from "../components/Main/ClubList.js";
 
-function Index() {
+function MainPage() {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("index");
@@ -32,4 +32,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default MainPage;

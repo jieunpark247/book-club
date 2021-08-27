@@ -2,14 +2,20 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 
-import "../assets/css/nucleo-icons.css";
-import "../assets/css/nucleo-svg.css"
-import "../assets/css/nucleo-svg.css"
-import "../assets/css/soft-design-system.css?v=1.0.5"
-import SignIn from "../components/Main/SignIn.js";
+
+import SignIn from "../components/Main/SignIn";
+import IndexNavbar from "../components/Navbars/IndexNavbar";
+import IndexFooter from "../components/Footers/IndexFooter";
+
 function SignInPage() {
   return (
-    < SignIn />
+    <>
+    < IndexNavbar />
+    <div className="main">
+      < SignIn />
+      < IndexFooter />
+    </div>
+    </>
   );
 }
 

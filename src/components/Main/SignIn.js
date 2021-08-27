@@ -33,10 +33,10 @@ function SignIn() {
                 </form>
               </div>
               <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                <p class="mb-4 text-sm mx-auto">
+                <p class="mb-2 text-sm mx-auto">
                   Don't have an account?
-                  <a href="javascript:;" class="text-primary text-gradient font-weight-bold">Sign up</a>
                 </p>
+                  <button type="button" class="btn-kakao"><img src={require("assets/img/kakao-login/kakao_login_medium_narrow.png").default} alt=""/></button>
               </div>
             </div>
           </div>
