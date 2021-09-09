@@ -522,6 +522,8 @@ progress {
     max-width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
+    padding-top: calc(var(--bs-gutter-x) * .5);
+    padding-bottom: calc(var(--bs-gutter-x) * .5);
     margin-top: var(--bs-gutter-y); }
 
 .col {
@@ -3637,6 +3639,11 @@ textarea.form-control-lg {
   flex: 1 1 auto;
   padding: 1rem 1rem; }
 
+.card-body-detail {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);}
+  
 .card-title {
   margin-bottom: 0.5rem; }
 

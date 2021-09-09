@@ -8,7 +8,7 @@ import IndexNavbar from "../components/Navbars/IndexNavbar";
 import IndexFooter from "../components/Footers/IndexFooter.js";
 
 
-function CreatePage() {
+function DetailClubPage() {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("index");
@@ -20,12 +20,10 @@ function CreatePage() {
     <>
       < IndexNavbar />
       <div className="main">
-  
         < IndexFooter />
       </div>
-      
     </>
   );
 }
 
-export default CreatePage;
+export default DetailClubPage;

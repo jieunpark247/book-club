@@ -15,6 +15,8 @@ import SignInPage from "views/SignInPage";
 import MyPage from "views/MyPage";
 import CreatePage from "views/CreatePage";
 import JoinPage from "views/JoinPage";
+import ClubPage from "views/ClubPage"; 
+import DetailClubPage from "views/DetailClubPage";  
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -33,7 +35,12 @@ ReactDOM.render(
      <Route
         path="/join"
         render={(props) => <JoinPage {...props} />}/>
-
+     <Route
+        path="/club"
+        render={(props) => <ClubPage {...props} />}/>
+     <Route
+        path="/detail-club"
+        render={(props) => <DetailClubPage {...props} />}/>
       <Redirect to="/index" />
     </Switch>
   </BrowserRouter>,
